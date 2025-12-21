@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio || Naila R O</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -55,6 +56,15 @@
       </div>
 
       <div class="content-about">
+        <div class="social">
+          <a href="https://www.instagram.com/nilrrsh/"
+            ><i data-feather="instagram"></i
+          ></a>
+          <a href="https://x.com/yanguwonie_"><i data-feather="twitter"></i></a>
+          <a href="https://github.com/nailarashieka"
+            ><i data-feather="github"></i
+          ></a>
+        </div>
         <h3>Who Is Naila?!</h3>
         <p>
           Hii, nice to meet you! My name is Naila, but people usually call me
@@ -66,6 +76,88 @@
       </div>
     </section>
 
+    <!-- project section -->
+    <section class="project" id="project">
+      <h1 class="heading2">My<span> Project</span></h1>
+
+      <div class="content-project">
+        <div class="card">
+          <div class="imgp">
+            <img src="/img/pro1.png" alt="" />
+          </div>
+          <div class="desc">
+            <h2>Web Studio Ghibli</h2>
+            <p>
+              Membuat Project latihan ke 6, dimana saya diperintahkan untuk
+              membuat website tema bebas dan membuat navbar yang responsive
+              sesuai prosedur yang bapa shandika berikan
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgp">
+            <img src="/img/pro2.png" alt="" />
+          </div>
+          <div class="desc">
+            <h2>Web Zerobaseone</h2>
+            <p>
+              Membuat project latihan ke 5, dimana saya diperintahkan membuat
+              sebuah website tema bebas tetapi isinya sesuai dengan prosedure
+              yang bapa shandika berikan
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="imgp">
+            <img src="/img/pro3.png" alt="" />
+          </div>
+          <div class="desc">
+            <h2>Web Boostrap</h2>
+            <p>
+              Membuat project latihan ke 7, dimana saya diperintahkan untuk
+              membuat website dengan menggunakan Boostrap dengan tema bebas
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skill" id="skill">
+      <h1 class="heading3">My <span>Skills</span></h1>
+      <div class="skills">
+        <div class="skill-section">
+          <div class="skills-name">HTML</div>
+          <div class="skills-bar"></div>
+          <div class="skills-per" per="80%" style="max-width: 90%"></div>
+        </div>
+        <div class="skill-section">
+          <div class="skills-name">CSS</div>
+          <div class="skills-bar"></div>
+          <div class="skills-per" per="50%" style="max-width: 50%"></div>
+        </div>
+        <div class="skill-section">
+          <div class="skills-name">Java Script</div>
+          <div class="skills-bar"></div>
+          <div class="skills-per" per="30%" style="max-width: 30%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" id="contact">
+      <h1 class="heading4">Contact <span>Me</span></h1>
+      <form>
+        <input type="text" placeholder="Full Name" />
+        <input type="email" placeholder="Email" />
+        <textarea name="Message" placeholder="Message"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
     <script src="/js/script.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>

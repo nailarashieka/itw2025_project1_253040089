@@ -194,7 +194,7 @@ section {
 }
 
 .heading {
-  font-size: 4rem;
+  font-size: 70px;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -231,6 +231,230 @@ span {
   text-align: justify;
 }
 
+.content-about .social {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+}
+
+.content-about .social a {
+  color: #01162b;
+}
+
+.content-about .social a:hover {
+  color: #d2dbeb;
+}
+
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  padding: 50px;
+}
+
+.project .heading2 {
+  font-size: 70px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.content-project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 100px 50px;
+  padding: 20px 20px;
+  padding-bottom: 30px;
+}
+
+.content-project .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 300px;
+  height: 300px;
+  background: #6a90b4;
+  border-radius: 20px;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.content-project .card:hover {
+  height: 400px;
+}
+
+.content-project .card .imgp {
+  position: absolute;
+  top: 20px;
+  width: 250px;
+  height: 220px;
+  background: #01162b;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.content-project .card:hover .imgp {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 180px;
+}
+
+.content-project .card .imgp img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-project .card .desc {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  padding: 30px 30px;
+  height: 45px;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.content-project .card:hover .desc {
+  top: 80px;
+  height: 250px;
+}
+
+.content-project .card .desc h2 {
+  color: #d2dbeb;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.content-project .card .desc p {
+  color: #d2dbeb;
+  text-align: justify;
+  padding: 25px;
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  padding: 10px;
+  background: #6a90b4;
+}
+
+.skill .heading3 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.skills {
+  width: 100%;
+  max-width: 600px;
+  padding: 100px;
+}
+
+.skills-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #01162b;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.skills-bar {
+  height: 14px;
+  background: #2c3843;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skills-per {
+  height: 14px;
+  background: #d2dbeb;
+  border-radius: 3px;
+  position: relative;
+  animation: bar 2.5s 1;
+}
+
+.skills-per::before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background: #d2dbeb;
+  border-radius: 5px;
+  font-size: 12px;
+  top: -35px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skills-per::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #d2dbeb;
+  top: -20px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+.contact {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 89%;
+  margin-bottom: 30px;
+  padding: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d2dbeb;
+  color: #333;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a90b4;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #8093a5;
+}
+
 /* responsive */
 @media screen and (max-width: 768px) {
   nav ul {
@@ -261,5 +485,14 @@ span {
   nav ul.slide {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes bar {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
   }
 }
