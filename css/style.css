@@ -215,6 +215,11 @@ span {
   width: 90%;
   border-radius: 50%;
   border: 0.2rem solid #00385a;
+  transition: 0.3s;
+}
+
+.img img:hover {
+  box-shadow: 0 0 50px #00385a;
 }
 
 .content-about {
@@ -361,56 +366,57 @@ span {
   text-align: center;
 }
 
-.skills {
-  width: 100%;
-  max-width: 600px;
-  padding: 50px;
+.skill .skill-section {
+  background-color: #00385a;
+  width: fit-content;
+  max-width: 90%;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.skills-name {
-  font-size: 18px;
-  font-weight: 700;
-  color: #01162b;
-  text-transform: uppercase;
-  margin: 20px 0;
+.skill .skill-section .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+  padding: 10px;
 }
 
-.skills-bar {
-  height: 14px;
-  background: #2c3843;
-  border-radius: 3px;
+.skill .skill-section .bar {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #6a90b4;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.skills-per {
-  height: 14px;
-  background: #d2dbeb;
-  border-radius: 3px;
-  position: relative;
-  animation: bar 2.5s 1;
+.skill .skill-section .bar:hover {
+  box-shadow: 0 5px 10px #6a90b4;
+  transform: scale(1.03);
 }
 
-.skills-per::before {
-  content: attr(per);
-  position: absolute;
-  padding: 4px 6px;
-  background: #d2dbeb;
-  border-radius: 5px;
-  font-size: 12px;
-  top: -35px;
-  right: 0;
-  transform: translateX(50%);
+.skill .skill-section .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.skills-per::after {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: #d2dbeb;
-  top: -20px;
-  right: 0;
-  transform: translateX(50%) rotate(45deg);
-  border-radius: 2px;
+.skill .skill-section .info img {
+  width: 60px;
+  height: auto;
+}
+
+.skill .skill-section .info span {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 8px;
 }
 
 .contact {
@@ -546,6 +552,30 @@ footer .credit a {
 
   .btn-box .btn {
     height: 45px;
+    font-size: 16px;
+  }
+
+  .skill .skill-section {
+    width: 60%;
+    padding: 20px;
+  }
+
+  .skill .skill-section .bar {
+    flex: 1 1 200px;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .skill .skill-section .row {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .skill .skill-section .info img {
+    width: 50px;
+  }
+
+  .skill .skill-section .info span {
     font-size: 16px;
   }
 }
