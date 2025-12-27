@@ -181,9 +181,9 @@
         data-aos-duration="1000"
         class="contact-section"
       >
-        <form>
-          <input type="text" placeholder="Full Name" />
-          <input type="email" placeholder="Email" />
+        <form name="nro-contact-form">
+          <input type="text" name="name" placeholder="Full Name" />
+          <input type="email" name="email" placeholder="Email" />
           <textarea name="Message" placeholder="Message"></textarea>
           <button type="submit">Submit</button>
         </form>
@@ -219,5 +219,20 @@
     <script>
       feather.replace();
     </script>
+
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwx-PlpH1cOkfJsJ-YIu5pnFwFfpkQoaAu990I4EyX5LjMONFZNOJD2gDwCUnJCGYJHTQ/exec'
+    const form = document.forms['nro-contact-form']
+
+    form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+      form.reset()
+      console.log('Success!', response)
+    })
+      .catch(error => console.error('Error!', error.message))
+    })
+  </script>
   </body>
 </html>
