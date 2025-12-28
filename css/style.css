@@ -1,14 +1,8 @@
-* {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -30,6 +24,7 @@ nav {
   z-index: 1000;
   box-shadow: 5px 0px 5px #01162b;
   opacity: 0.8;
+  box-sizing: border-box;
 }
 
 nav .logo {
@@ -263,7 +258,6 @@ span {
   align-items: center;
   flex-direction: column;
   gap: 100px;
-  padding: 60px;
 }
 
 .project .heading2 {
@@ -346,7 +340,7 @@ span {
 
 .content-project .card .desc h2 {
   color: #d2dbeb;
-  margin-top: 5px;
+  margin-top: 20px;
   font-size: 1.5em;
   font-weight: 700;
 }
