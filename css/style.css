@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #d2dbeb;
   font-family: "Momo Trust Display", sans-serif;
@@ -334,11 +340,12 @@ span {
 
 .content-project .card:hover .desc {
   top: 80px;
-  height: 250px;
+  height: 300px;
 }
 
 .content-project .card .desc h2 {
   color: #d2dbeb;
+  margin-top: 5px;
   font-size: 1.5em;
   font-weight: 700;
 }
