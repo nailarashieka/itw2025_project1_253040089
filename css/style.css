@@ -1,7 +1,7 @@
-html,
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -434,13 +434,14 @@ span {
 }
 
 .contact-section {
-  width: 80%;
+  width: 90%;
   max-width: 700px;
   margin: 50px auto;
-  padding: 30px;
+  padding: 20px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 
 form {
@@ -453,6 +454,7 @@ form input,
 form textarea {
   justify-content: center;
   width: 100%;
+  box-sizing: border-box;
   max-width: 600px;
   margin-bottom: 30px;
   padding: 20px;
